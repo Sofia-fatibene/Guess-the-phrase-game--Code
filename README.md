@@ -1,9 +1,10 @@
 # Guess-the-phrase-game--Code
 
-`let phrases = ["fox in a box", "dog at the park", "cat has a hat"];
+let phrases = ["fox in a box", "dog at the park", "cat has a hat"];
 let curPhrase;
 let guess;
 
+```
 function setup () {
 	// Make the drawing canvase as big as the window
 	createCanvas(windowWidth, windowHeight);
@@ -17,11 +18,12 @@ function setup () {
 	// initiate game
 	selectRandomPhrase();
 }
+```
 
 String.prototype.replaceAt = function(index, replacement) {
     return this.substring(0, index) + replacement + this.substring(index + replacement.length);
 }
-
+```
 function selectRandomPhrase() {
 	let index = Math.floor(random(0, phrases.length));
 	print("index is ", index);
@@ -32,7 +34,9 @@ function selectRandomPhrase() {
 		print(i, guess[i]);
 	}
 }
+```
 
+```
 function draw() {
 	clear();
 	textSize(50);
@@ -46,7 +50,9 @@ function draw() {
 
 	line(85, 10000000, 670, 2);
 }
+```
 
+```
 function keyPressed() {
 	// print("key pressed is", key);
   if (key >= 'a' && key <= 'z') { 
@@ -71,3 +77,4 @@ function keyPressed() {
 		}
   }
 }`
+```
