@@ -1,3 +1,4 @@
+~
 let colorlist = ['gold', 'yellow', 'turquoise', 'red']
 
 function setup() {
