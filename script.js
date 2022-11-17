@@ -1,15 +1,3 @@
-let colorlist = ['gold', 'yellow', 'turquoise', 'red']
-
-function setup() {
-  createCanvas(windowWidth, windowHeight);
-  background(255);
-}
-
-function draw() {
-  noStroke()
-  fill(random(colorlist));
-  ellipse(mouseX, mouseY, 25, 25);
-}   // let phrase, timer, guesses, screen and button
 let phrases = ('fox in a box, cat, dog')
 let curPhrase;
 let guess;
@@ -19,42 +7,55 @@ let timerStart = 0;
 let seconds;
 let screen = 1;
 let button;
-//let col = color(74, 247, 120);
-    
-    // draw the Screen 1,2,3
-function  drawScreen () {
+
+
+ function  drawScreen () {
 	 if (screen == 1) { 
- 		background (0,0,0);
- 		fill (252,252, 252);
+ 		background (145, 177, 230);
   	textSize(50);
-		textStyle (BOLDITALIC);
-		fill (252,252, 252);
-    text("Guess the Word", 500, 200); 
-	  textSize(20);
-		textStyle (ITALIC);
-		text (" Click here to see the instructions > ", 400, 330)
-		button = createButton(' INSTRUCTIONS');
-    button.style (ITALIC)
-	  button.size(400,60)
-    button.position(750, 300);
-    button.mousePressed(startGame);
+		button = createButton('Click to see the instructions');
+		button.size(400,60)
+    button.position(480, 210);
+   button.mousePressed(startGame);
 		
      } else if (screen == 2 ){
-		background (0,0,0);
+		background (145, 177, 230);
  		fill (252,252,252);
-		rect (480,200, 500, 500);   
+		rect (0,0, 700, 700);   
   	fill (0);
+			 textStyle (BOLDITALIC)
   	textSize(50);
-    text("Instructions",800, 150);
+    text("Instructions",60, 80);
 		fill (0);
-  	textSize(50);
-    text("-Every 2 wrong guesses, the player will recive a hint",800, 250);
+  	textSize(40);
+    text("-Guess letters from keyboard", 40, 200);
+		fill (0);
+  	textSize(40);
+    text("-Use hints if you need it",40, 300);
+		
 		
 			 // CREATE START BUTTON
-	  button = createButton('Click to play');
+	  button = createButton('EASY');
 		button.size(400,60)
-  	button.position(500, 200);
+  	button.position(800, 100);
+	  let col = color(96, 227, 25);
+    button.style('background-color', col);
   	button.mousePressed(restartGame);
+			 
+			 button = createButton('MEDIUM');
+		button.size(400,60)
+  	button.position(800, 200);
+			 let hello = color(227, 126, 25);
+    button.style('background-color', hello);
+			 
+			 button = createButton('HARD');
+		button.size(400,60)
+  	button.position(800, 300);
+			 let hi = color( 237, 26, 26);
+    button.style('background-color', hi)
+			
+			 
+			 
   } else if (screen == 3) {
 	clear();
 	textSize(50);
@@ -66,6 +67,13 @@ function  drawScreen () {
 	
 	textSize(50);
 	text(guess, 750, 400);
+		
+		textSize(20);
+  timer = int(millis()/ 1000 - timerStart);     // counts up from the start time (0)
+	
+	fill(24);
+  fill(0);
+  text ("Timer: " + timer, 630, 40);			// display timer
 	
 	square(900,50, 300);
 
@@ -100,9 +108,6 @@ function setup () {
 	// Set the RGB background colour
 	background(250,250,250);
 
-	
-	
-	
 	// Set the frame rate
 	frameRate(1);
 	
@@ -111,10 +116,6 @@ function setup () {
 	
 	selectRandomPhrase();
 	let div = createDiv;{
-		button = createButton('Click to see the instructions');
-		button.size(400,60)
-    button.position(750, 300);
-    button.mousePressed(startGame);
 		
 	
 	}
@@ -140,14 +141,6 @@ function selectRandomPhrase() {
 }
 function draw() {
 	drawScreen ();
-		
-	
-	textSize(20);
-  timer = int(millis()/ 1000 - timerStart);     // counts up from the start time (0)
-	
-	fill(24);
-  fill(0);
-  text ("Timer: " + timer, 630, 40);			// display timer
 	
 	
 	
