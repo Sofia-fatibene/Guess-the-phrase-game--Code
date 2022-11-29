@@ -2,21 +2,23 @@
 
 ## What is it?
 - One player guessing game
-- Different modes available for different ages
-- Hints available whenever you need
+- Different modes are available for different ages
+- You can use the hint button for every word\phrase but you will lose one star
 
 ## Modes:
-- easiest mode has shorter words
-- medium mode has phrases
-- hard mode has long phrases
+- Easiest mode has shorter words
+- Medium mode has phrases
+- Hard mode has long phrases
 
 ## Point system 
+- You start with 3 stars
 - Stars can be lost but not gained
-- After 7 wrong guesses you lose a star
-- after all stars are lost you lose the game
+- After 6 wrong guesses you lose a star
+- After all stars are lost you lose the game
 
 ## In the future:
 - Add a timer
 - Add multi player
 - Add more phrases
+- Add more visuals (e.g pictures)
 
